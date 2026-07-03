@@ -247,9 +247,14 @@ h1,h2,h3{margin:0;line-height:1.2;font-weight:700;letter-spacing:-.01em}
 .trust-in,.final-in{position:relative;z-index:1}
 
 /* фінальний акцент «угода закрита» в розділі «Як це працює» */
-.how-result{position:relative;margin-top:34px;border-radius:16px;overflow:hidden;min-height:300px;box-shadow:0 18px 46px rgba(30,39,50,.14)}
-.how-result img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
-.how-result-cap{position:absolute;left:0;right:0;bottom:0;padding:26px 28px;color:#fff;background:linear-gradient(transparent,rgba(20,28,38,.86))}
+.how-result{position:relative;margin-top:34px;border-radius:16px;overflow:hidden;aspect-ratio:16/9;box-shadow:0 18px 46px rgba(30,39,50,.14)}
+.how-result img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 26%}
+.how-result-cap{position:absolute;left:0;right:0;bottom:0;padding:26px 28px;color:#fff;background:linear-gradient(transparent,rgba(20,28,38,.88))}
 .hr-title{font-size:22px;font-weight:700}
 .hr-sub{font-size:15px;color:#dfe6ee;margin-top:5px}
-@media(max-width:720px){.how-result{min-height:230px}.how-result-cap{padding:20px}.hr-title{font-size:19px}}
+@media(max-width:720px){.how-result{aspect-ratio:4/3}.how-result-cap{padding:20px}.hr-title{font-size:19px}}
+
+/* секція «живий приклад» — тёмна вітрина з фоновим фото */
+#example{background-color:var(--ink);background-image:linear-gradient(rgba(30,39,50,.90),rgba(30,39,50,.94)),url('example-bg.jpg');background-size:cover;background-position:center;background-repeat:no-repeat}
+#example h2{color:#fff}
+#example .sub{color:#a9b4c2}
