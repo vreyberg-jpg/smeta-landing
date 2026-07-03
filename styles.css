@@ -236,6 +236,10 @@ h1,h2,h3{margin:0;line-height:1.2;font-weight:700;letter-spacing:-.01em}
 .sect{background-color:var(--page);background-image:radial-gradient(rgba(30,39,50,.045) 1px,transparent 1px);background-size:24px 24px}
 .sect.alt{background-color:var(--page-alt);background-image:radial-gradient(rgba(47,127,209,.06) 1px,transparent 1px);background-size:24px 24px}
 
+/* фонові фото під сильним затемненням (текст лишається читабельним) */
+.hero{background-image:linear-gradient(rgba(30,39,50,.86),rgba(30,39,50,.95)),url('hero-bg.jpg');background-size:cover;background-position:center;background-repeat:no-repeat}
+.trust{background-image:linear-gradient(rgba(30,39,50,.90),rgba(30,39,50,.93)),url('trust-bg.jpg');background-size:cover;background-position:center;background-repeat:no-repeat}
+
 /* м'яке світіння в тёмних секціях */
 .trust,.final{position:relative;overflow:hidden}
 .trust::before,.final::before{content:"";position:absolute;inset:0;pointer-events:none;
