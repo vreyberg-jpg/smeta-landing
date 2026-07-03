@@ -183,7 +183,9 @@ h1,h2,h3{margin:0;line-height:1.2;font-weight:700;letter-spacing:-.01em}
 .qr img,.qr canvas{display:block;width:128px;height:128px}
 .qr-cap{font-size:13px;color:#8fbdec}
 
-/* коли відкрито як Telegram Mini App — ховаємо зайве */
+/* коли відкрито як Telegram Mini App — ховаємо зайве + прибираємо «резинку» скролу */
+.in-telegram{background-color:#1e2732}
+.in-telegram, .in-telegram body{overscroll-behavior:none}
 .in-telegram .nav-links a.btn{display:none}
 .in-telegram .qr-wrap{display:none}
 

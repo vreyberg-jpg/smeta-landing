@@ -2,7 +2,13 @@
   var tg = window.Telegram && window.Telegram.WebApp;
   var inTelegram = tg && ((tg.initData && tg.initData.length) || (tg.platform && tg.platform !== 'unknown'));
   if (inTelegram) {
-    try { tg.ready(); tg.expand(); } catch (e) {}
+    try {
+      tg.ready();
+      tg.expand();
+      if (tg.setHeaderColor) tg.setHeaderColor('#1e2732');
+      if (tg.setBackgroundColor) tg.setBackgroundColor('#1e2732');
+      if (tg.disableVerticalSwipes) tg.disableVerticalSwipes();
+    } catch (e) {}
     document.documentElement.classList.add('in-telegram');
   }
 
