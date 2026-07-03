@@ -245,3 +245,11 @@ h1,h2,h3{margin:0;line-height:1.2;font-weight:700;letter-spacing:-.01em}
 .trust::before,.final::before{content:"";position:absolute;inset:0;pointer-events:none;
   background:radial-gradient(600px 300px at 85% 12%,rgba(47,127,209,.16),transparent 60%)}
 .trust-in,.final-in{position:relative;z-index:1}
+
+/* фінальний акцент «угода закрита» в розділі «Як це працює» */
+.how-result{position:relative;margin-top:34px;border-radius:16px;overflow:hidden;min-height:300px;box-shadow:0 18px 46px rgba(30,39,50,.14)}
+.how-result img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.how-result-cap{position:absolute;left:0;right:0;bottom:0;padding:26px 28px;color:#fff;background:linear-gradient(transparent,rgba(20,28,38,.86))}
+.hr-title{font-size:22px;font-weight:700}
+.hr-sub{font-size:15px;color:#dfe6ee;margin-top:5px}
+@media(max-width:720px){.how-result{min-height:230px}.how-result-cap{padding:20px}.hr-title{font-size:19px}}
