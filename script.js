@@ -35,9 +35,33 @@
         if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach(function (el) { io.observe(el); });
+    reveals.forEach(function (el) {
+      var sibs = el.parentNode ? [].slice.call(el.parentNode.children).filter(function (c) { return c.classList && c.classList.contains('reveal'); }) : [el];
+      var i = sibs.indexOf(el);
+      if (i > 0) el.style.transitionDelay = Math.min(i * 0.07, 0.35) + 's';
+      io.observe(el);
+    });
   } else {
     reveals.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  function countUp(el) {
+    var to = +el.getAttribute('data-to') || 0, t0 = null;
+    (function step(t) {
+      if (t0 === null) t0 = t;
+      var p = Math.min(1, (t - t0) / 1100), v = Math.round(to * (1 - Math.pow(1 - p, 3)));
+      el.textContent = new Intl.NumberFormat('uk-UA').format(v);
+      if (p < 1) requestAnimationFrame(step);
+    })(performance.now());
+  }
+  var cus = document.querySelectorAll('.cu');
+  if ('IntersectionObserver' in window) {
+    var io2 = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { countUp(en.target); io2.unobserve(en.target); } });
+    }, { threshold: 0.4 });
+    cus.forEach(function (el) { io2.observe(el); });
+  } else {
+    cus.forEach(countUp);
   }
 
   var qrEl = document.getElementById('qr');

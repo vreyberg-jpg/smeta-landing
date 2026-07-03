@@ -186,3 +186,25 @@ h1,h2,h3{margin:0;line-height:1.2;font-weight:700;letter-spacing:-.01em}
 /* коли відкрито як Telegram Mini App — ховаємо зайве */
 .in-telegram .nav-links a.btn{display:none}
 .in-telegram .qr-wrap{display:none}
+
+/* анімований логотип */
+.logo-mark{transition:transform .28s cubic-bezier(.2,.8,.2,1)}
+.brand:hover .logo-mark{transform:scale(1.07) rotate(-3deg)}
+.logo-mark .lm-bar{transform-box:fill-box;transform-origin:top;animation:lmBar .6s .15s both cubic-bezier(.2,.85,.25,1)}
+.logo-mark .lm-l{transform-box:fill-box;opacity:0;animation:lmLine .45s both cubic-bezier(.2,.8,.2,1)}
+.logo-mark .lm-l1{animation-delay:.42s}
+.logo-mark .lm-l2{animation-delay:.52s}
+.logo-mark .lm-l3{animation-delay:.62s}
+@keyframes lmBar{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes lmLine{from{opacity:0;transform:translateX(-4px)}to{opacity:1;transform:none}}
+
+/* ховер-підйом карток + мікронатиск кнопок */
+.card{transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(30,39,50,.10);border-color:#cfe0f3}
+.ic{transition:transform .22s ease}
+.card:hover .ic{transform:scale(1.09)}
+.btn:active{transform:translateY(0) scale(.97)}
+
+@media(prefers-reduced-motion:reduce){
+  .logo-mark .lm-bar,.logo-mark .lm-l{animation:none!important;opacity:1!important;transform:none!important}
+}
