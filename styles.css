@@ -208,3 +208,36 @@ h1,h2,h3{margin:0;line-height:1.2;font-weight:700;letter-spacing:-.01em}
 @media(prefers-reduced-motion:reduce){
   .logo-mark .lm-bar,.logo-mark .lm-l{animation:none!important;opacity:1!important;transform:none!important}
 }
+
+/* смуга прогресу скролу */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:60;will-change:width}
+
+/* компактна шапка при скролі */
+.nav-in{transition:height .25s ease}
+.nav.scrolled .nav-in{height:54px}
+.logo-mark{transition:transform .28s cubic-bezier(.2,.8,.2,1),width .25s ease,height .25s ease}
+.nav.scrolled .logo-mark{width:28px;height:28px}
+.brand-tx{transition:font-size .25s ease}
+.nav.scrolled .brand-tx{font-size:17px}
+
+/* фактура фону — герой (м'яке світіння + креслярська сітка) */
+.hero{position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(620px 320px at 12% 8%,rgba(47,127,209,.18),transparent 60%),
+  radial-gradient(520px 320px at 92% 88%,rgba(47,127,209,.12),transparent 60%)}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:46px 46px;
+  -webkit-mask-image:radial-gradient(ellipse at center,#000 35%,transparent 82%);
+  mask-image:radial-gradient(ellipse at center,#000 35%,transparent 82%)}
+.hero-in{position:relative;z-index:1}
+
+/* фактура фону — світлі секції (тонкі крапки замість плаского білого) */
+.sect{background-color:var(--page);background-image:radial-gradient(rgba(30,39,50,.045) 1px,transparent 1px);background-size:24px 24px}
+.sect.alt{background-color:var(--page-alt);background-image:radial-gradient(rgba(47,127,209,.06) 1px,transparent 1px);background-size:24px 24px}
+
+/* м'яке світіння в тёмних секціях */
+.trust,.final{position:relative;overflow:hidden}
+.trust::before,.final::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(600px 300px at 85% 12%,rgba(47,127,209,.16),transparent 60%)}
+.trust-in,.final-in{position:relative;z-index:1}

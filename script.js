@@ -7,8 +7,14 @@
   }
 
   var nav = document.getElementById('nav');
+  var progress = document.getElementById('progress');
   var onScroll = function () {
     if (nav) nav.classList.toggle('scrolled', window.scrollY > 8);
+    if (progress) {
+      var h = document.documentElement;
+      var max = h.scrollHeight - h.clientHeight;
+      progress.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+    }
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
