@@ -182,3 +182,7 @@ h1,h2,h3{margin:0;line-height:1.2;font-weight:700;letter-spacing:-.01em}
   display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.25)}
 .qr img,.qr canvas{display:block;width:128px;height:128px}
 .qr-cap{font-size:13px;color:#8fbdec}
+
+/* коли відкрито як Telegram Mini App — ховаємо зайве */
+.in-telegram .nav-links a.btn{display:none}
+.in-telegram .qr-wrap{display:none}

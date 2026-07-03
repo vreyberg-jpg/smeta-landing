@@ -1,4 +1,11 @@
 (function () {
+  var tg = window.Telegram && window.Telegram.WebApp;
+  var inTelegram = tg && ((tg.initData && tg.initData.length) || (tg.platform && tg.platform !== 'unknown'));
+  if (inTelegram) {
+    try { tg.ready(); tg.expand(); } catch (e) {}
+    document.documentElement.classList.add('in-telegram');
+  }
+
   var nav = document.getElementById('nav');
   var onScroll = function () {
     if (nav) nav.classList.toggle('scrolled', window.scrollY > 8);
