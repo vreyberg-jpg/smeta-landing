@@ -164,3 +164,21 @@ h1,h2,h3{margin:0;line-height:1.2;font-weight:700;letter-spacing:-.01em}
   .browser iframe{height:480px}
   .sect{padding:56px 0}
 }
+
+/* designs gallery */
+.designs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:38px}
+.thumb{transition:transform .2s ease}
+.thumb:hover{transform:translateY(-4px)}
+.th-card{border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 8px 22px rgba(30,39,50,.10)}
+.th-head{background:var(--h);color:#fff;font-size:11px;font-weight:600;padding:8px 11px}
+.th-body{background:var(--bg);color:var(--tx);padding:10px 11px}
+.th-total{font-size:16px;font-weight:700;margin-bottom:6px}
+.th-row{display:flex;justify-content:space-between;font-size:11px;color:var(--mut);padding:2px 0}
+.th-name{text-align:center;font-size:13px;color:var(--tx-mut);margin-top:9px}
+
+/* qr on final cta */
+.qr-wrap{display:flex;flex-direction:column;align-items:center;gap:9px;margin-top:30px}
+.qr{background:#fff;padding:10px;border-radius:14px;width:148px;height:148px;
+  display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.qr img,.qr canvas{display:block;width:128px;height:128px}
+.qr-cap{font-size:13px;color:#8fbdec}

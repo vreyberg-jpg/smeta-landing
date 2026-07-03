@@ -32,4 +32,12 @@
   } else {
     reveals.forEach(function (el) { el.classList.add('in'); });
   }
+
+  var qrEl = document.getElementById('qr');
+  if (qrEl && window.QRCode) {
+    new QRCode(qrEl, {
+      text: 'https://t.me/good_smeta_bot', width: 128, height: 128,
+      colorDark: '#1e2732', colorLight: '#ffffff', correctLevel: QRCode.CorrectLevel.M
+    });
+  }
 })();
