@@ -83,4 +83,14 @@
       colorDark: '#1e2732', colorLight: '#ffffff', correctLevel: QRCode.CorrectLevel.M
     });
   }
+
+  function scaleFrames() {
+    document.querySelectorAll('.dl-frame').forEach(function (f) {
+      var ifr = f.querySelector('iframe');
+      if (ifr) ifr.style.transform = 'scale(' + (f.clientWidth / 1180) + ')';
+    });
+  }
+  scaleFrames();
+  window.addEventListener('resize', scaleFrames);
+  window.addEventListener('load', scaleFrames);
 })();
