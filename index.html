@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://www.smeta.org.ua/og.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@900&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
@@ -30,16 +30,89 @@
 <header class="nav" id="nav">
   <div class="wrap nav-in">
     <a class="brand" href="#top" aria-label="smeta.org.ua">
-      <svg class="logo-mark" width="34" height="34" viewBox="0 0 40 40" aria-hidden="true">
-        <clipPath id="pg1"><rect x="9" y="4" width="22" height="31" rx="3"/></clipPath>
-        <g clip-path="url(#pg1)">
-          <rect x="9" y="4" width="22" height="31" fill="#ffffff"/>
-          <rect class="lm-bar" x="9" y="4" width="22" height="9" fill="#2f7fd1"/>
-          <rect class="lm-l lm-l1" x="13" y="19" width="14" height="2.2" rx="1" fill="#9aa7b8"/>
-          <rect class="lm-l lm-l2" x="13" y="24" width="14" height="2.2" rx="1" fill="#9aa7b8"/>
-          <rect class="lm-l lm-l3" x="13" y="29" width="9" height="2.2" rx="1" fill="#9aa7b8"/>
-        </g>
-      </svg>
+      <span class="brand-emblem" aria-hidden="true">
+        <svg viewBox="0 0 360 360" role="img" aria-label="SMETA.ORG.UA">
+          <defs>
+            <radialGradient id="sm-disc" cx="42%" cy="32%" r="75%">
+              <stop offset="0" stop-color="#FAFCFE"/><stop offset="1" stop-color="#D3DCE7"/>
+            </radialGradient>
+            <linearGradient id="sm-ring-band" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#3E72B4"/><stop offset=".5" stop-color="#1E4C86"/><stop offset="1" stop-color="#14345F"/>
+            </linearGradient>
+            <linearGradient id="sm-sheet-grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2E62A6"/><stop offset="1" stop-color="#1A3F74"/>
+            </linearGradient>
+            <linearGradient id="sm-steel" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#FAFCFE"/><stop offset=".5" stop-color="#C9D6E6"/><stop offset="1" stop-color="#93A8C4"/>
+            </linearGradient>
+            <linearGradient id="sm-orange" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#F7A22E"/><stop offset="1" stop-color="#D9770F"/>
+            </linearGradient>
+            <linearGradient id="sm-tower-blue" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#3E72B4"/><stop offset="1" stop-color="#1E4C86"/>
+            </linearGradient>
+            <linearGradient id="sm-tower-steel" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#9FB4CE"/><stop offset="1" stop-color="#5E7799"/>
+            </linearGradient>
+            <clipPath id="sm-sheet-clip"><rect x="78" y="132" width="150" height="140" rx="12"/></clipPath>
+            <clipPath id="sm-disc-clip"><circle cx="180" cy="180" r="139"/></clipPath>
+          </defs>
+          <g>
+            <g style="transform-box:fill-box;transform-origin:center;animation:sm-ring 5.5s ease-out both;">
+              <circle cx="180" cy="180" r="139" fill="url(#sm-disc)"/>
+              <circle cx="180" cy="180" r="150" fill="none" stroke="url(#sm-ring-band)" stroke-width="20"/>
+              <circle cx="180" cy="180" r="160" fill="none" stroke="#C6D2E0" stroke-width="2.5"/>
+              <circle cx="180" cy="180" r="140" fill="none" stroke="#AFC0D6" stroke-width="2"/>
+            </g>
+            <g clip-path="url(#sm-disc-clip)">
+              <path d="M74 208 L106 172 L134 190 L164 150 L194 160 L224 110 L252 126 L280 96"
+                    fill="none" stroke="url(#sm-orange)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"
+                    opacity=".6" stroke-dasharray="520" style="animation:sm-graph 5.5s cubic-bezier(.3,.7,.3,1) both;"/>
+              <g style="transform-box:fill-box;transform-origin:left center;animation:sm-sheet 5.5s cubic-bezier(.2,.8,.25,1) both;">
+                <rect x="78" y="132" width="150" height="140" rx="12" fill="url(#sm-sheet-grad)"/>
+                <rect x="78" y="132" width="150" height="140" rx="12" fill="none" stroke="#8FB0D6" stroke-width="2"/>
+              </g>
+              <g clip-path="url(#sm-sheet-clip)" style="animation:sm-detail 5.5s ease both;">
+                <g stroke="#BFD3EC" stroke-width="1.4" opacity=".45">
+                  <line x1="98" y1="132" x2="98" y2="272"/><line x1="128" y1="132" x2="128" y2="272"/>
+                  <line x1="158" y1="132" x2="158" y2="272"/><line x1="188" y1="132" x2="188" y2="272"/>
+                  <line x1="218" y1="132" x2="218" y2="272"/>
+                  <line x1="78" y1="162" x2="228" y2="162"/><line x1="78" y1="192" x2="228" y2="192"/>
+                  <line x1="78" y1="222" x2="228" y2="222"/><line x1="78" y1="252" x2="228" y2="252"/>
+                </g>
+                <rect x="88" y="150" width="26" height="10" fill="none" stroke="#E8871E" stroke-width="2" opacity=".7"/>
+                <rect x="190" y="238" width="30" height="10" fill="none" stroke="#E8871E" stroke-width="2" opacity=".7"/>
+              </g>
+              <text x="123" y="238" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="900" font-size="120"
+                    fill="url(#sm-steel)" stroke="#22406E" stroke-width="2.5"
+                    style="transform-box:fill-box;transform-origin:center;animation:sm-s 5.5s cubic-bezier(.2,.8,.25,1) both;">S</text>
+              <g style="transform-box:fill-box;transform-origin:50% 100%;animation:sm-b1 5.5s cubic-bezier(.2,.9,.3,1) both;">
+                <rect x="158" y="168" width="26" height="84" fill="url(#sm-tower-blue)"/>
+                <g fill="#BCD3EE" opacity=".8"><rect x="163" y="178" width="6" height="6"/><rect x="173" y="178" width="6" height="6"/><rect x="163" y="192" width="6" height="6"/><rect x="173" y="192" width="6" height="6"/><rect x="163" y="206" width="6" height="6"/><rect x="173" y="206" width="6" height="6"/></g>
+              </g>
+              <g style="transform-box:fill-box;transform-origin:50% 100%;animation:sm-b2 5.5s cubic-bezier(.2,.9,.3,1) both;">
+                <rect x="186" y="104" width="32" height="148" fill="url(#sm-orange)"/>
+                <rect x="198" y="86" width="8" height="20" fill="url(#sm-orange)"/>
+                <g fill="#FCE2BE" opacity=".85"><rect x="192" y="118" width="7" height="8"/><rect x="205" y="118" width="7" height="8"/><rect x="192" y="134" width="7" height="8"/><rect x="205" y="134" width="7" height="8"/><rect x="192" y="150" width="7" height="8"/><rect x="205" y="150" width="7" height="8"/><rect x="192" y="166" width="7" height="8"/><rect x="205" y="166" width="7" height="8"/></g>
+              </g>
+              <g style="transform-box:fill-box;transform-origin:50% 100%;animation:sm-b3 5.5s cubic-bezier(.2,.9,.3,1) both;">
+                <rect x="220" y="140" width="26" height="112" fill="url(#sm-tower-blue)"/>
+                <g fill="#BCD3EE" opacity=".8"><rect x="225" y="152" width="6" height="7"/><rect x="235" y="152" width="6" height="7"/><rect x="225" y="168" width="6" height="7"/><rect x="235" y="168" width="6" height="7"/><rect x="225" y="184" width="6" height="7"/><rect x="235" y="184" width="6" height="7"/></g>
+              </g>
+              <g style="transform-box:fill-box;transform-origin:50% 100%;animation:sm-b4 5.5s cubic-bezier(.2,.9,.3,1) both;">
+                <rect x="248" y="182" width="22" height="70" fill="url(#sm-tower-steel)"/>
+                <g fill="#E4ECF5" opacity=".8"><rect x="253" y="192" width="5" height="6"/><rect x="261" y="192" width="5" height="6"/><rect x="253" y="206" width="5" height="6"/><rect x="261" y="206" width="5" height="6"/></g>
+              </g>
+              <g style="transform-box:fill-box;transform-origin:center;animation:sm-checkpop 5.5s ease both;">
+                <circle cx="205" cy="250" r="18" fill="#25C05A" opacity=".18" style="animation:sm-badge 5.5s ease both;"/>
+                <path d="M192 250 L202 261 L222 237" fill="none" stroke="#22C55E" stroke-width="8.5"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="130"
+                      style="animation:sm-check 5.5s cubic-bezier(.3,.7,.3,1) both;"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </span>
       <span class="brand-tx">smeta<span class="dim">.org.ua</span></span>
     </a>
     <nav class="nav-links" id="navlinks">
@@ -318,16 +391,13 @@
 <footer class="foot">
   <div class="wrap foot-in">
     <div class="brand">
-      <svg class="logo-mark" width="30" height="30" viewBox="0 0 40 40" aria-hidden="true">
-        <clipPath id="pg2"><rect x="9" y="4" width="22" height="31" rx="3"/></clipPath>
-        <g clip-path="url(#pg2)">
-          <rect x="9" y="4" width="22" height="31" fill="#ffffff"/>
-          <rect x="9" y="4" width="22" height="9" fill="#2f7fd1"/>
-          <rect x="13" y="19" width="14" height="2.2" rx="1" fill="#9aa7b8"/>
-          <rect x="13" y="24" width="14" height="2.2" rx="1" fill="#9aa7b8"/>
-          <rect x="13" y="29" width="9" height="2.2" rx="1" fill="#9aa7b8"/>
-        </g>
-      </svg>
+      <span class="foot-emblem" aria-hidden="true">
+        <svg viewBox="0 0 64 64">
+          <circle cx="32" cy="32" r="30" fill="#1D3E6B"/>
+          <circle cx="32" cy="32" r="30" fill="none" stroke="#3E72B4" stroke-width="3"/>
+          <text x="32" y="46" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="900" font-size="42" fill="#EAF0F8">S</text>
+        </svg>
+      </span>
       <span class="brand-tx">smeta<span class="dim">.org.ua</span></span>
     </div>
     <div class="foot-links">

@@ -297,3 +297,26 @@ h1,h2,h3{margin:0;line-height:1.15;font-weight:700;letter-spacing:-.02em;font-fa
 #example{background-color:var(--ink);background-image:linear-gradient(rgba(30,39,50,.90),rgba(30,39,50,.94)),url('example-bg.jpg');background-size:cover;background-position:center;background-repeat:no-repeat}
 #example h2{color:#fff}
 #example .sub{color:#a9b4c2}
+
+/* ---- емблема-логотип у шапці/футері (будується один раз при завантаженні) ---- */
+.brand-emblem{width:46px;height:46px;flex-shrink:0;display:block;
+  transition:width .25s ease,height .25s ease}
+.brand-emblem svg{width:100%;height:100%;overflow:visible;display:block}
+.nav.scrolled .brand-emblem{width:38px;height:38px}
+.foot-emblem{width:30px;height:30px;flex-shrink:0}
+.foot-emblem svg{width:100%;height:100%;display:block}
+
+@keyframes sm-ring{0%{opacity:0;transform:scale(.86)}4%{opacity:1}9%,100%{opacity:1;transform:scale(1)}}
+@keyframes sm-b1{0%,4%{transform:scaleY(0)}12%{transform:scaleY(1.06)}15%,100%{transform:scaleY(1)}}
+@keyframes sm-b2{0%,7%{transform:scaleY(0)}15%{transform:scaleY(1.06)}18%,100%{transform:scaleY(1)}}
+@keyframes sm-b3{0%,10%{transform:scaleY(0)}18%{transform:scaleY(1.06)}21%,100%{transform:scaleY(1)}}
+@keyframes sm-b4{0%,13%{transform:scaleY(0)}21%{transform:scaleY(1.06)}24%,100%{transform:scaleY(1)}}
+@keyframes sm-sheet{0%,24%{transform:scaleX(0)}34%{transform:scaleX(1.02)}37%,100%{transform:scaleX(1)}}
+@keyframes sm-detail{0%,34%{opacity:0}43%,100%{opacity:1}}
+@keyframes sm-s{0%,35%{opacity:0;transform:scale(.6)}45%{opacity:1;transform:scale(1.06)}48%,100%{opacity:1;transform:scale(1)}}
+@keyframes sm-check{0%,45%{stroke-dashoffset:130}55%,100%{stroke-dashoffset:0}}
+@keyframes sm-checkpop{0%,54%{transform:scale(1)}57%{transform:scale(1.12)}60%,100%{transform:scale(1)}}
+@keyframes sm-badge{0%,46%{opacity:0}54%,100%{opacity:.18}}
+@keyframes sm-graph{0%,57%{stroke-dashoffset:520}74%,100%{stroke-dashoffset:0}}
+
+@media (prefers-reduced-motion:reduce){.brand-emblem *,.foot-emblem *{animation:none!important}}
