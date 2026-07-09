@@ -93,4 +93,45 @@
   scaleFrames();
   window.addEventListener('resize', scaleFrames);
   window.addEventListener('load', scaleFrames);
+
+  // тонкий зорепад на фіксованому фоні (глибина тёмного фону)
+  (function () {
+    if (document.documentElement.classList.contains('in-telegram')) return;
+    var canvas = document.createElement('canvas');
+    canvas.id = 'stars';
+    document.body.appendChild(canvas);
+    var ctx = canvas.getContext('2d');
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var stars = [], W = 0, H = 0;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function resize() {
+      W = canvas.width = Math.floor(window.innerWidth * dpr);
+      H = canvas.height = Math.floor(window.innerHeight * dpr);
+      canvas.style.width = window.innerWidth + 'px';
+      canvas.style.height = window.innerHeight + 'px';
+      var n = Math.min(100, Math.round(window.innerWidth * window.innerHeight / 18000));
+      stars = [];
+      for (var i = 0; i < n; i++) {
+        stars.push({
+          x: Math.random() * W, y: Math.random() * H,
+          r: (Math.random() * 1.2 + 0.3) * dpr,
+          ph: Math.random() * 6.283, tw: Math.random() * 0.03 + 0.008,
+          vy: (Math.random() * 0.05 + 0.015) * dpr
+        });
+      }
+    }
+    function frame() {
+      ctx.clearRect(0, 0, W, H);
+      for (var i = 0; i < stars.length; i++) {
+        var s = stars[i];
+        if (!reduce) { s.ph += s.tw; s.y -= s.vy; if (s.y < 0) { s.y = H; s.x = Math.random() * W; } }
+        ctx.globalAlpha = 0.2 + 0.5 * (0.5 + 0.5 * Math.sin(s.ph));
+        ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, 6.283); ctx.fillStyle = '#bcd2f0'; ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+      if (!reduce) requestAnimationFrame(frame);
+    }
+    resize(); frame();
+    window.addEventListener('resize', resize);
+  })();
 })();

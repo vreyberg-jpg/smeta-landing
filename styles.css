@@ -320,3 +320,47 @@ h1,h2,h3{margin:0;line-height:1.15;font-weight:700;letter-spacing:-.02em;font-fa
 @keyframes sm-graph{0%,57%{stroke-dashoffset:520}74%,100%{stroke-dashoffset:0}}
 
 @media (prefers-reduced-motion:reduce){.brand-emblem *,.foot-emblem *{animation:none!important}}
+
+/* ===================== ТЁМНИЙ ФОН (dark theme) ===================== */
+:root{
+  --page:#141c2b;
+  --page-alt:#18212f;
+  --tx:#eaeff6;
+  --tx-mut:#9aa8ba;
+  --line:#2d3b4e;
+}
+body{background:#141c2b}
+a{color:#6cabee}
+
+/* фіксований backdrop: сильне синє світіння + тонка креслярська сітка */
+body::before{content:"";position:fixed;inset:0;z-index:-3;pointer-events:none;background:
+  radial-gradient(1150px 660px at 50% -10%, rgba(58,84,246,.40), transparent 64%),
+  radial-gradient(880px 600px at 87% 5%, rgba(47,127,209,.26), transparent 62%),
+  radial-gradient(920px 720px at 6% 38%, rgba(47,127,209,.15), transparent 62%),
+  radial-gradient(820px 560px at 93% 84%, rgba(52,110,232,.16), transparent 62%)}
+body::after{content:"";position:fixed;inset:0;z-index:-3;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(ellipse 86% 66% at 50% 4%,#000,transparent 82%);
+  mask-image:radial-gradient(ellipse 86% 66% at 50% 4%,#000,transparent 82%)}
+#stars{position:fixed;inset:0;z-index:-2;pointer-events:none}
+
+/* світлі секції стають прозорими — backdrop світиться крізь них */
+.sect{background-color:transparent;background-image:none}
+.sect.alt{background-color:rgba(255,255,255,.022);background-image:none}
+.stats{background:transparent;border-bottom:1px solid var(--line)}
+
+/* картки та поверхні → тёмні (припідняті над фоном) */
+.card,.sect.alt .card{background:#1e2938;border-color:#2e3d51}
+.card:hover{border-color:#43566e;box-shadow:0 16px 36px rgba(0,0,0,.4)}
+.ic{background:#1d2f4d;color:#7db6f2}
+.stat-n{color:#f2f6fb}
+.price-card{background:#1e2938;border-color:#2e3d51;box-shadow:0 18px 44px rgba(0,0,0,.35)}
+.price-badge{background:#1d2f4d;color:#9cc6f2}
+.faq details{background:#1e2938;border-color:#2e3d51}
+.sf-step{background:#1e2938;border-color:#2e3d51;box-shadow:0 4px 16px rgba(0,0,0,.35)}
+.dl-frame{background:#141c2b;border-color:#2e3d51}
+.browser{background:#141c2b;border-color:#2e3d51}
+.browser-bar{background:#1e2938}
+.burl{background:#141c2b;border-color:#2e3d51;color:#9aa8ba}
+.foot{background:#0f1622}
