@@ -1,13 +1,13 @@
 :root{
   --ink:#1e2732;        /* графіт — база */
   --ink-2:#27313f;
-  --accent:#b5643c;     /* терракота — акцент */
-  --accent-d:#9a4f2c;
+  --accent:#2f7fd1;     /* синій — акцент */
+  --accent-d:#1c5aa8;
   --page:#ffffff;
-  --page-alt:#f7f3ec;
+  --page-alt:#f5f8fb;
   --tx:#1b2430;
   --tx-mut:#5b6472;
-  --line:#ece6db;
+  --line:#e6eaf0;
   --line-dark:#303a48;
   --radius:12px;
   --wrap:1080px;
@@ -28,13 +28,13 @@ h1,h2,h3{margin:0;line-height:1.15;font-weight:700;letter-spacing:-.02em;font-fa
   background:var(--accent);color:#fff;font-weight:600;font-size:15px;
   padding:11px 20px;border-radius:10px;border:1px solid transparent;cursor:pointer;
   transition:transform .12s ease,background .2s ease,box-shadow .2s ease;white-space:nowrap}
-.btn:hover{background:var(--accent-d);transform:translateY(-1px);box-shadow:0 8px 22px rgba(154,79,44,.30)}
+.btn:hover{background:var(--accent-d);transform:translateY(-1px);box-shadow:0 8px 22px rgba(28,90,168,.28)}
 .btn-lg{padding:14px 26px;font-size:16px}
 .btn-sm{padding:8px 15px;font-size:14px}
 .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.28)}
 .btn-ghost:hover{background:rgba(255,255,255,.08);box-shadow:none}
 .btn-on-dark{background:#fff;color:var(--ink)}
-.btn-on-dark:hover{background:#f4ece3;color:var(--accent-d)}
+.btn-on-dark:hover{background:#eaf1f9;color:var(--accent-d)}
 
 /* ---- nav ---- */
 .nav{position:sticky;top:0;z-index:50;background:rgba(30,39,50,.92);
@@ -54,7 +54,7 @@ h1,h2,h3{margin:0;line-height:1.15;font-weight:700;letter-spacing:-.02em;font-fa
 /* ---- hero ---- */
 .hero{background:var(--ink);color:#eef2f6;padding:72px 0 64px;overflow:hidden}
 .hero-in{text-align:center;max-width:820px;margin:0 auto}
-.badge{display:inline-block;font-size:13px;color:#e0a487;background:#3a2a20;
+.badge{display:inline-block;font-size:13px;color:#8fbdec;background:#22344a;
   padding:5px 13px;border-radius:20px;margin-bottom:20px}
 .hero h1{font-size:clamp(30px,5.4vw,50px);color:#fff;margin-bottom:18px}
 .lead{font-size:clamp(16px,2.2vw,19px);color:#a9b4c2;max-width:640px;margin:0 auto 26px}
@@ -81,7 +81,7 @@ h1,h2,h3{margin:0;line-height:1.15;font-weight:700;letter-spacing:-.02em;font-fa
   margin:44px auto 0;max-width:760px;text-align:left}
 .ba-label{font-size:13px;margin-bottom:8px}
 .ba-before{color:#8b97a8}
-.ba-after{color:#d1815a}
+.ba-after{color:#8fbdec}
 .ba-card{border-radius:12px;padding:12px 14px}
 .ba-dull{background:var(--ink-2);border:1px solid var(--line-dark)}
 .ba-arrow{display:flex;align-items:center;justify-content:center}
@@ -90,7 +90,7 @@ h1,h2,h3{margin:0;line-height:1.15;font-weight:700;letter-spacing:-.02em;font-fa
 .ba-nice{background:#faf7f0;padding:0;overflow:hidden;box-shadow:0 18px 46px rgba(0,0,0,.34)}
 .nice-head{background:#1e2732;color:#fff;font-weight:600;font-size:13px;padding:9px 12px;display:flex;align-items:center;gap:8px;font-family:var(--hfont)}
 .nice-logo{width:16px;height:16px;border-radius:4px;background:var(--accent);flex-shrink:0}
-.nice-strip{background:#b5643c;color:#fff;display:flex;justify-content:space-between;align-items:center;padding:7px 12px}
+.nice-strip{background:#c2410c;color:#fff;display:flex;justify-content:space-between;align-items:center;padding:7px 12px}
 .nice-strip span{font-size:10px;letter-spacing:1px;text-transform:uppercase;opacity:.9}
 .nice-strip b{font-family:var(--hfont);font-size:16px;font-weight:700}
 .nice-body{padding:10px 12px}
@@ -107,7 +107,7 @@ h1,h2,h3{margin:0;line-height:1.15;font-weight:700;letter-spacing:-.02em;font-fa
 .sect.alt .card{background:#fff}
 .card h3{font-size:18px;margin:14px 0 8px}
 .card p{margin:0;color:var(--tx-mut);font-size:15px}
-.ic{width:44px;height:44px;border-radius:10px;background:#f5ebe1;color:var(--accent-d);
+.ic{width:44px;height:44px;border-radius:10px;background:#eaf2fb;color:var(--accent-d);
   display:flex;align-items:center;justify-content:center}
 .ic svg{width:23px;height:23px}
 .steps .step-n{width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;
@@ -134,7 +134,7 @@ h1,h2,h3{margin:0;line-height:1.15;font-weight:700;letter-spacing:-.02em;font-fa
 /* price */
 .price-card{max-width:480px;margin:40px auto 0;background:#fff;border:1px solid var(--line);
   border-radius:16px;padding:36px 30px;text-align:center;box-shadow:0 14px 40px rgba(30,39,50,.08)}
-.price-badge{display:inline-block;font-size:13px;color:var(--accent-d);background:#f5ebe1;
+.price-badge{display:inline-block;font-size:13px;color:var(--accent-d);background:#eaf2fb;
   padding:4px 12px;border-radius:20px}
 .price-big{font-size:38px;font-weight:700;margin:12px 0 6px}
 .price-card p{color:var(--tx-mut);margin:0 0 22px}
@@ -154,7 +154,7 @@ h1,h2,h3{margin:0;line-height:1.15;font-weight:700;letter-spacing:-.02em;font-fa
 .final-in{max-width:680px;margin:0 auto}
 .final h2{color:#fff}
 .final p{color:#aeb9c6;font-size:18px;margin:14px 0 28px}
-.final-handle{margin-top:16px;color:#e0a487;font-size:14px}
+.final-handle{margin-top:16px;color:#8fbdec;font-size:14px}
 
 /* footer */
 .foot{background:var(--ink);color:#9aa7b8;padding:34px 0;border-top:1px solid var(--line-dark)}
@@ -216,7 +216,7 @@ h1,h2,h3{margin:0;line-height:1.15;font-weight:700;letter-spacing:-.02em;font-fa
 .qr{background:#fff;padding:10px;border-radius:14px;width:148px;height:148px;
   display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.25)}
 .qr img,.qr canvas{display:block;width:128px;height:128px}
-.qr-cap{font-size:13px;color:#e0a487}
+.qr-cap{font-size:13px;color:#8fbdec}
 
 /* коли відкрито як Telegram Mini App — ховаємо зайве + прибираємо «резинку» скролу */
 .in-telegram{background-color:#1e2732}
@@ -239,7 +239,7 @@ h1,h2,h3{margin:0;line-height:1.15;font-weight:700;letter-spacing:-.02em;font-fa
 
 /* ховер-підйом карток + мікронатиск кнопок */
 .card{transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
-.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(30,39,50,.10);border-color:#ecd9c9}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(30,39,50,.10);border-color:#cfe0f3}
 .ic{transition:transform .22s ease}
 .card:hover .ic{transform:scale(1.09)}
 .btn:active{transform:translateY(0) scale(.97)}
@@ -262,8 +262,8 @@ h1,h2,h3{margin:0;line-height:1.15;font-weight:700;letter-spacing:-.02em;font-fa
 /* фактура фону — герой (м'яке світіння + креслярська сітка) */
 .hero{position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:
-  radial-gradient(620px 320px at 12% 8%,rgba(181,100,60,.20),transparent 60%),
-  radial-gradient(520px 320px at 92% 88%,rgba(181,100,60,.14),transparent 60%)}
+  radial-gradient(620px 320px at 12% 8%,rgba(47,127,209,.18),transparent 60%),
+  radial-gradient(520px 320px at 92% 88%,rgba(47,127,209,.12),transparent 60%)}
 .hero::after{content:"";position:absolute;inset:0;pointer-events:none;
   background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
   background-size:46px 46px;
@@ -273,7 +273,7 @@ h1,h2,h3{margin:0;line-height:1.15;font-weight:700;letter-spacing:-.02em;font-fa
 
 /* фактура фону — світлі секції (тонкі крапки замість плаского білого) */
 .sect{background-color:var(--page);background-image:radial-gradient(rgba(30,39,50,.045) 1px,transparent 1px);background-size:24px 24px}
-.sect.alt{background-color:var(--page-alt);background-image:radial-gradient(rgba(181,100,60,.06) 1px,transparent 1px);background-size:24px 24px}
+.sect.alt{background-color:var(--page-alt);background-image:radial-gradient(rgba(47,127,209,.06) 1px,transparent 1px);background-size:24px 24px}
 
 /* фонові фото під сильним затемненням (текст лишається читабельним) */
 .hero{background-image:linear-gradient(rgba(30,39,50,.86),rgba(30,39,50,.95)),url('hero-bg.jpg');background-size:cover;background-position:center;background-repeat:no-repeat}
@@ -282,7 +282,7 @@ h1,h2,h3{margin:0;line-height:1.15;font-weight:700;letter-spacing:-.02em;font-fa
 /* м'яке світіння в тёмних секціях */
 .trust,.final{position:relative;overflow:hidden}
 .trust::before,.final::before{content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(600px 300px at 85% 12%,rgba(181,100,60,.16),transparent 60%)}
+  background:radial-gradient(600px 300px at 85% 12%,rgba(47,127,209,.16),transparent 60%)}
 .trust-in,.final-in{position:relative;z-index:1}
 
 /* фінальний акцент «угода закрита» в розділі «Як це працює» */
